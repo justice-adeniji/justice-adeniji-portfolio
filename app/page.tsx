@@ -385,7 +385,7 @@ const sendEmail = (e: React.FormEvent) => {
               </Link>
             </div>
             <div className="mt-8 pt-8 border-t border-gray-800 text-gray-400 text-sm">
-              <p>&copy; 2024 Justice Adeniji. All rights reserved.</p>
+              <p>&copy; 2025 Justice Adeniji. All rights reserved.</p>
             </div>
           </div>
         </div>

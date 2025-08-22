@@ -77,6 +77,7 @@ const sendEmail = (e: React.FormEvent) => {
 }
 
 
+
   return (
     <div className="min-h-screen bg-white text-gray-900">
       {/* Hero Section */}
@@ -324,13 +325,15 @@ const sendEmail = (e: React.FormEvent) => {
                 <CardTitle>Send me a message</CardTitle>
               </CardHeader>
               <CardContent>
-<form ref={formRef} onSubmit={sendEmail} className="space-y-6">
+                <form ref={formRef} onSubmit={sendEmail} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium mb-2">Name</label>
                       <input
                         type="text"
                         id="name"
+                        name="name"
+                        required
                         className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500"
                         placeholder="Your name"
                       />
@@ -340,6 +343,8 @@ const sendEmail = (e: React.FormEvent) => {
                       <input
                         type="email"
                         id="email"
+                        name="email"
+                        required
                         className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500"
                         placeholder="your.email@example.com"
                       />
@@ -349,7 +354,9 @@ const sendEmail = (e: React.FormEvent) => {
                     <label htmlFor="message" className="block text-sm font-medium mb-2">Message</label>
                     <textarea
                       id="message"
+                      name="message"
                       rows={5}
+                      required
                       className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500 resize-none"
                       placeholder="Tell me about your project or just say hello!"
                     ></textarea>
@@ -358,6 +365,7 @@ const sendEmail = (e: React.FormEvent) => {
                     Send Message
                   </Button>
                 </form>
+
               </CardContent>
             </Card>
           </div>
